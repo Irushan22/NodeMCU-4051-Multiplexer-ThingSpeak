@@ -7,12 +7,11 @@
   
   #define ANALOG_INPUT A0
   
-  unsigned long muchnum = 1093464; //Thingspeak channel ID
-  const char* mywriteapi = "UDODNQK3QZ5C82R3"; //Thingspeak API key
+  unsigned long muchnum = ; //Thingspeak channel ID
+  const char* mywriteapi = ""; //Thingspeak API key
   
-  const char* WIFI_SSID = "PROLINK_H5004NK_A4AB6";  //your wifi username
-  const char* WIFI_PASSWORD = "567810234a"; //your wifi password
-  const char* host = "192.168.1.2"; // your local ip address
+  const char* WIFI_SSID = "";  //your wifi username
+  const char* WIFI_PASSWORD = ""; //your wifi password
   
   float forefoot;
   float Midfoot;
@@ -43,8 +42,6 @@ void loop() {
    changeMux(LOW, LOW, LOW);
    forefoot = analogRead(ANALOG_INPUT); //Value of the sensor connected Option 0 pin of Mux
    Serial.print("forefoot strike - ");Serial.println(forefoot);
-
-   
    
    changeMux(LOW, LOW, HIGH);
    Midfoot = analogRead(ANALOG_INPUT); //Value of the sensor connected Option 2 pin of Mux
